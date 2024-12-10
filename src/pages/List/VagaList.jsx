@@ -27,7 +27,7 @@ const VagaList = () => {
     <>
       <Header />
       <div className="vaga-list-container">
-        <h1>Vagas de Tecnologia em Destaque</h1>
+        <h1>Visualização das Vagas</h1>
         {error && <p className="error">{error}</p>}
         <button onClick={fetchVagas} disabled={loading}>
           {loading ? "Carregando..." : "Carregar Vagas"}
