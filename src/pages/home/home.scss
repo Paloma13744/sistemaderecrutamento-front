@@ -1,0 +1,98 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o container ocupe a altura inteira da tela */
+}
+
+.informacoes {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: left;
+  flex: 1; /* Permite que a seção principal expanda para ocupar o espaço disponível */
+  
+  h2 {
+    font-size: 30px;
+    color: #6b98c6;
+    text-align: center;
+    margin-bottom: 18px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .imghome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      width: 150px;
+    }
+  }
+
+  .descricao {
+    font-size: 15px;
+    color: black;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+
+    p {
+      margin-bottom: 20px;
+
+      br {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #d9d9d9; /* Exemplo de cor de fundo para o footer */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Regras de mídia para telas menores */
+@media (max-width: 768px) {
+  .informacoes {
+    padding: 15px;
+
+    h2 {
+      font-size: 24px; /* Reduz o tamanho do título */
+    }
+
+    .descricao {
+      font-size: 14px; /* Fonte menor para descrição */
+    }
+  }
+
+  footer {
+    padding: 15px;
+    font-size: 14px; /* Fonte menor no footer */
+  }
+}
+
+@media (max-width: 480px) {
+  .informacoes {
+    padding: 10px;
+
+    h2 {
+      font-size: 20px; /* Título ainda menor para telas pequenas */
+    }
+
+    .descricao {
+      font-size: 12px; /* Fonte menor ainda */
+    }
+
+    .imghome img {
+      width: 100px; /* Reduz a largura da imagem */
+    }
+  }
+
+  footer {
+    padding: 10px;
+    font-size: 12px; /* Fonte ajustada no footer */
+  }
+}
