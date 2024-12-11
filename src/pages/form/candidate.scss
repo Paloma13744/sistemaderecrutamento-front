@@ -92,14 +92,22 @@
 
 /* Estilo para o grupo de botões de relocação */
 .relocation-options {
+  gap: 15px; 
   display: flex;
-  gap: 30px; /* Aumenta o espaçamento entre os botões "Sim" e "Não" */
+  align-items: center; 
+
 }
 
 .radio-label {
-  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espaçamento entre o botão e o texto */
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
   cursor: pointer;
+ 
 }
+
 
 @media (max-width: 768px) {
   .vaga-form {

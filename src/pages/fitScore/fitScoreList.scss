@@ -1,19 +1,16 @@
 /* fitScoreList.scss */
 
 .fit-score-container {
-    padding: 20px;
-    text-align: center;
-    background-color: #f4f4f4;
-    min-height: 100vh;
-    /* Garante que o conteúdo ocupe a tela inteira */
-
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+  min-height: 100vh;
 }
 
 h1 {
   text-align: center;
-  color: #333;
-  font-family: 'MuseoModerno';
   color: #6b98c6;
+  font-family: 'MuseoModerno';
   font-size: 25px;
 }
 
@@ -31,6 +28,7 @@ h1 {
   align-items: center;
   gap: 10px;
   margin: 20px 0;
+  flex-wrap: wrap; /* Permite que os elementos fiquem em várias linhas se necessário */
 }
 
 select {
@@ -89,4 +87,41 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .filter-container {
+    flex-direction: column; /* Coloca os elementos em coluna em telas pequenas */
+    align-items: stretch; /* Faz com que os elementos ocupem toda a largura */
+  }
+
+  select, button {
+    width: 100%; /* Deixa os botões e selects ocuparem toda a largura */
+    font-size: 14px;
+  }
+
+  .fit-score-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .fit-score-card {
+    padding: 10px;
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .fit-score-card p {
+    font-size: 12px;
+  }
 }

@@ -53,8 +53,8 @@ const VagaList = () => {
               <p><strong>Descrição:</strong> {vaga.description}</p>
               <p><strong>Localização:</strong> {vaga.location}</p>
               <p><strong>Empresa:</strong> {vaga.enterprise}</p>
-              <p><strong>Área do Job:</strong> {tipoDeJobDescricao[vaga.tipoDeJob] || vaga.tipoDeJob}</p>
-              <p><strong>Data:</strong> {new Date(vaga.postingDate).toLocaleDateString("pt-BR")}</p>
+              <p><strong>Área de atuação:</strong> {tipoDeJobDescricao[vaga.tipoDeJob] || vaga.tipoDeJob}</p>
+              <p><strong>Data Postada:</strong> {new Date(vaga.postingDate).toLocaleDateString("pt-BR")}</p>
               <p><strong>Modalidade:</strong> {vaga.modality}</p>
             </div>
           ))}
