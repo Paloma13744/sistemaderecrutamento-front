@@ -3,6 +3,37 @@ import axios from "axios";
 // Configuração da URL da API
 const API_URL = process.env.REACT_APP_API_URL;
 
+
+// Método para buscar os fitScores
+export const getFitScores = async (tipoDeJob) => {
+  try {
+    console.log("Chamando API:", `${API_URL}/candidates/fitScores?tipoDeJob=${tipoDeJob}`);
+    const response = await axios.get(`${API_URL}/candidates/fitScores`, {
+      params: { tipoDeJob },
+    });
+
+    console.log("Resposta recebida:", response.data);
+
+    if (Array.isArray(response.data)) {
+      return response.data;
+    } else {
+      console.error("Dados inesperados:", response.data);
+      throw new Error("Formato de dados inesperado.");
+    }
+  } catch (error) {
+    console.error("Erro ao buscar fitScores:");
+    if (error.response) {
+      console.error("Erro da API:", error.response.status, error.response.data); // Log detalhado da API
+    } else if (error.request) {
+      console.error("Nenhuma resposta do servidor:", error.request);
+    } else {
+      console.error("Erro ao configurar a requisição:", error.message);
+    }
+    alert("Erro ao carregar os fitScores. Tente novamente mais tarde.");
+    throw error; // Repassa o erro para que seja tratado
+  }
+};
+
 // Método para buscar dados
 export const getFuncion = async () => {
   try {

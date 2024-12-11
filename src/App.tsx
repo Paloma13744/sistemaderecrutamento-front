@@ -4,6 +4,7 @@ import Home from './pages/home/Home';
 import VagaForm from './pages/form/VagaForm';
 import VagaList from './pages/List/VagaList';
 import CandidateForm from './pages/form/CandidateForm';
+import FitScore from './pages/fitScore/FitScore';
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
         <Route path="/vagas" element={<VagaList />} /> {/* Página para visualizar vagas */}
         <Route path="/create-job" element={<VagaForm />} /> {/* Página para cadastrar vagas */}
         <Route path="/candidato" element={<CandidateForm />} /> {/* Página para formulário do candidato */}
-
+        <Route path="/fitScore" element={<FitScore />} /> {/* Página fitScore do candidato */}
       </Routes>
     </Router>  
   );

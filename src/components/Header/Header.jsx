@@ -16,6 +16,7 @@ const Header = () => {
                 <Link to="/vagas" className="nav-link">Visualizar Vagas</Link> 
                 <Link to="/create-job" className="nav-link">Cadastrar Vagas</Link> 
                 <Link to="/candidato" className="nav-link">Candidato</Link> 
+                <Link to="/fitScore" className="nav-link">FitScore</Link> 
             </nav>
 
 

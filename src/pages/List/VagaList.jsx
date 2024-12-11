@@ -4,6 +4,20 @@ import Footer from "../../components/Footer/Footer";
 import vagasService from "../../api/service/vagasService";
 import "./vagaList.scss";
 
+
+const tipoDeJobDescricao = {
+  TECNOLOGIA: 'Tecnologia',
+  ADMINISTRACAO: 'Administração',
+  MARKETING: 'Marketing',
+  SAUDE: 'Saúde',
+  ENGENHARIA: 'Engenharia',
+  EDUCACAO: 'Educação',
+  COMERCIO: 'Comércio',
+  INDUSTRIA: 'Indústria',
+  LOGISTICA: 'Logística',
+  ARTE: 'Arte',
+};
+
 const VagaList = () => {
   const [vagas, setVagas] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -39,7 +53,7 @@ const VagaList = () => {
               <p><strong>Descrição:</strong> {vaga.description}</p>
               <p><strong>Localização:</strong> {vaga.location}</p>
               <p><strong>Empresa:</strong> {vaga.enterprise}</p>
-              <p><strong>Área do Job:</strong> {vaga.jobArea}</p>
+              <p><strong>Área do Job:</strong> {tipoDeJobDescricao[vaga.tipoDeJob] || vaga.tipoDeJob}</p>
               <p><strong>Data:</strong> {new Date(vaga.postingDate).toLocaleDateString("pt-BR")}</p>
               <p><strong>Modalidade:</strong> {vaga.modality}</p>
             </div>
