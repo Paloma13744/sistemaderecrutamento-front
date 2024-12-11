@@ -1,46 +1,79 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Talent Fusion - Front-End 
 
-## Available Scripts
+Bem-vindo ao repositório front-end do **Talent Fusion**, um sistema de recrutamento desenvolvido para conectar empresas a candidatos ideais. Este repositório contém a interface do usuário que permite a gestão de vagas, cadastro de candidatos e análise de compatibilidade com base no FitScore.
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+- **Página Home**: Exibe informações gerais sobre o sistema, incluindo uma seção "Sobre Nós".
+- **Cadastrar Vagas**: Permite o cadastro de vagas, integrando-se ao back-end para salvar e recuperar as informações das vagas cadastradas.
+- **Visualizar Vagas**: Exibe uma tabela com as vagas cadastradas.
+- **Cadastro de Candidatos**: Formulário para candidatos se registrarem no sistema.
+- **FitScore**: Mostra uma pontuação calculada para identificar o candidato mais adequado para cada vaga.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tecnologias Utilizadas
 
-### `npm test`
+As seguintes tecnologias foram usadas no desenvolvimento deste projeto:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=flat-square) **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white&style=flat-square) **TypeScript**: Superconjunto de JavaScript que adiciona tipagem estática.
+- ![SCSS](https://img.shields.io/badge/-SCSS-CC6699?logo=sass&logoColor=white&style=flat-square) **SCSS**: Preprocessador CSS para estilização avançada.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalação e Execução
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Siga os passos abaixo para rodar o projeto localmente:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Paloma13744/sistemaderecrutamento-front.git
+   ```
 
-### `npm run eject`
+2. Acesse o diretório do projeto:
+   ```bash
+   cd sistemaderecrutamento-front
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+O aplicativo estará disponível em [http://localhost:3000](http://localhost:3000).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## Estrutura do Projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+📂 talent-fusion-frontend
+├───public
+└───src
+    ├───api
+    │   └───service
+    ├───components
+    │   ├───Footer
+    │   └───Header
+    ├───pages
+    │   ├───fitScore
+    │   ├───form
+    │   ├───home
+    │   └───List
+    └───services
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+
+## Autores
+
+- [Paloma13744](https://github.com/Paloma13744)
+- [ThSFernandes](https://github.com/ThSFernandes)
