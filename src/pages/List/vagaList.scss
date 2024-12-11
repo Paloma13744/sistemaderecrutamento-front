@@ -4,14 +4,14 @@
   text-align: center;
   background-color: #f4f4f4;
   min-height: 100vh;
-  /* Garante que o conteúdo ocupe a tela inteira */
+ 
 }
 
 
 .vaga-list-container h1 {
   font-family: 'MuseoModerno';
   color: #6b98c6;
-  font-size: 2rem;
+  font-size: 25px;
   margin-bottom: 10px;
   font-weight: 600;
 }
@@ -26,9 +26,9 @@
 /* Estilo do botão para carregar vagas */
 button {
   font-family: 'Poppins', sans-serif;
-  margin: 18px 0;
+  margin: 16px 0;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 13px;
   color: #fff;
   background: black;
   border: none;
@@ -94,7 +94,7 @@ button {
 
 
 footer {
-  margin-top: 40px;
+  margin-top: 20px;
   background-color: #333;
   color: #fff;
   text-align: center;

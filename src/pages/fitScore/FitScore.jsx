@@ -58,6 +58,7 @@ const FitScore = () => {
           )}
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };

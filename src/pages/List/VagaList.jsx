@@ -59,8 +59,10 @@ const VagaList = () => {
             </div>
           ))}
         </div>
+        
       </div>
-      <Footer />
+      <Footer></Footer>
+      
     </>
   );
 };
