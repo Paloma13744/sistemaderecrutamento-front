@@ -3,7 +3,6 @@ import axios from "axios";
 // Configuração da URL da API
 const API_URL = process.env.REACT_APP_API_URL;
 
-
 // Método para buscar os fitScores
 export const getFitScores = async (tipoDeJob) => {
   try {
@@ -34,7 +33,7 @@ export const getFitScores = async (tipoDeJob) => {
   }
 };
 
-// Método para buscar dados
+// Método para buscar todas as vagas
 export const getFuncion = async () => {
   try {
     console.log("Chamando API:", `${API_URL}/jobs`); // Log da URL chamada
@@ -61,23 +60,55 @@ export const getFuncion = async () => {
   }
 };
 
+// Método para buscar vagas do último mês
+export const getJobsLastMonth = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/jobs/last-month`);
+    console.log("Vagas do último mês:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao buscar vagas do último mês:", error.response?.data || error.message);
+    throw error;
+  }
+};
 
+// Método para buscar vagas dos últimos três meses
+export const getJobsLastThreeMonths = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/jobs/last-three-months`);
+    console.log("Vagas dos últimos três meses:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao buscar vagas dos últimos três meses:", error.response?.data || error.message);
+    throw error;
+  }
+};
+
+// Método para buscar vagas dos últimos seis meses
+export const getJobsLastSixMonths = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/jobs/last-six-months`);
+    console.log("Vagas dos últimos seis meses:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao buscar vagas dos últimos seis meses:", error.response?.data || error.message);
+    throw error;
+  }
+};
 
 export const postFuncion = async (vaga) => {
   try {
     const response = await axios.post(`${API_URL}/jobs`, vaga);
-    console.log("Código de status:", response.status);  // Exibe o status da resposta para depuração
+    console.log("Código de status:", response.status); // Exibe o status da resposta para depuração
 
     if (response.status === 201) {
       // Mostra a mensagem de sucesso apenas quando o status for 201
       alert("Vaga cadastrada com sucesso!");
-      console.log("Dados retornados:", response.data);  // Exibe os dados retornados para depuração
-      return response.data;
-    } else {
-      alert("Erro ao cadastrar vaga. Código de erro: " + response.status);
-      console.error("Erro ao cadastrar vaga:", response.data);  // Log de erro no servidor
+      console.log("Dados retornados:", response.data); // Exibe os dados retornados para depuração
       return response.data;
     }
+
+    return response.data;
   } catch (error) {
     // A resposta do erro pode estar disponível em error.response
     console.error("Erro na requisição:", error.response?.data || error.message);
@@ -87,7 +118,7 @@ export const postFuncion = async (vaga) => {
 };
 
 export const postCandidate = async (candidate) => {
-  console.log("Enviando dados do candidato:", candidate);  // Log para verificar os dados enviados
+  console.log("Enviando dados do candidato:", candidate); // Log para verificar os dados enviados
   try {
     const response = await axios.post(`${API_URL}/candidates`, candidate);
     console.log("Código de status:", response.status);

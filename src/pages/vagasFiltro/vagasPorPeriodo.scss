@@ -1,0 +1,53 @@
+.vagas-por-periodo-container {
+  padding: 20px;
+  text-align: center;
+
+  .filter-container {
+    margin: 20px 0;
+
+    label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    select {
+      margin-right: 10px;
+      padding: 5px;
+    }
+
+    button {
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+
+      &:disabled {
+        background-color: #ccc;
+      }
+    }
+  }
+
+  .vagas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+    .vaga-card {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-align: left;
+
+      h2 {
+        margin-bottom: 10px;
+        color: #007bff;
+      }
+
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
+}

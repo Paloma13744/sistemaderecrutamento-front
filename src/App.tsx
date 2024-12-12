@@ -5,6 +5,7 @@ import VagaForm from './pages/form/VagaForm';
 import VagaList from './pages/List/VagaList';
 import CandidateForm from './pages/form/CandidateForm';
 import FitScore from './pages/fitScore/FitScore';
+import VagasPorPeriodo from './pages/vagasFiltro/VagasPorPeriodo';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/create-job" element={<VagaForm />} /> {/* Página para cadastrar vagas */}
         <Route path="/candidato" element={<CandidateForm />} /> {/* Página para formulário do candidato */}
         <Route path="/fitScore" element={<FitScore />} /> {/* Página fitScore do candidato */}
+        <Route path="/vagas-por-periodo" element={<VagasPorPeriodo />} /> {/* Página fitScore do candidato */}
       </Routes>
     </Router>  
   );

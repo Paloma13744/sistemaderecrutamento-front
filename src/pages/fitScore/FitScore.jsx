@@ -38,8 +38,16 @@ const FitScore = () => {
             value={jobType}
             onChange={(e) => setJobType(e.target.value)}
           >
-            <option value="TECNOLOGIA">TECNOLOGIA</option>
-            <option value="ADMINISTRACAO">ADMINISTRACAO</option>
+            <option value="TECNOLOGIA">Tecnologia</option>
+            <option value="ADMINISTRACAO">Administração</option>
+            <option value="MARKETING">Marketing</option>
+            <option value="SAUDE">Saude</option>
+            <option value="ENGENHARIA">Engenharia</option>
+            <option value="EDUCACAO">Educação</option>
+            <option value="COMERCIO">Comercio</option>
+            <option value="INDUSTRIA">Industria</option>
+            <option value="LOGISTICA">Logística</option>
+            <option value="ARTE">Artes</option>
           </select>
           <button onClick={fetchFitScores} disabled={loading}>
             {loading ? "Carregando..." : "Carregar FitScores"}
