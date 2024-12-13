@@ -11,7 +11,7 @@ h1 {
   text-align: center;
   color: #6b98c6;
   font-family: 'MuseoModerno';
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .error {
@@ -22,18 +22,20 @@ h1 {
 
 .filter-container {
   font-family: 'Poppins', sans-serif;
+  font-size: 13px;
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   margin: 20px 0;
-  flex-wrap: wrap; /* Permite que os elementos fiquem em várias linhas se necessário */
+  flex-wrap: wrap;
+  /* Permite que os elementos fiquem em várias linhas se necessário */
 }
 
 select {
   padding: 5px;
-  font-size: 16px;
+  font-size: 13px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -53,10 +55,14 @@ button:disabled {
 }
 
 .fit-score-grid {
+  font-family: 'Poppins', sans-serif;
+  color: rgba(212, 37, 25, 0.925);
+  font-size: 14px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   padding: 10px;
+
 }
 
 .fit-score-card {
@@ -68,11 +74,14 @@ button:disabled {
 }
 
 .fit-score-card h2 {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  color: #007bff;
+  color: #6b98c6;
+  font-size: 18px;
 }
 
 .fit-score-card p {
+  font-family: 'Poppins', sans-serif;
   margin: 5px 0;
   font-size: 14px;
   color: #555;
@@ -96,12 +105,15 @@ footer {
   }
 
   .filter-container {
-    flex-direction: column; /* Coloca os elementos em coluna em telas pequenas */
-    align-items: stretch; /* Faz com que os elementos ocupem toda a largura */
+    flex-direction: column;
+    /* Coloca os elementos em coluna em telas pequenas */
+    align-items: stretch;
+    /* Faz com que os elementos ocupem toda a largura */
   }
 
-  select, button {
-    width: 100%; /* Deixa os botões e selects ocuparem toda a largura */
+  select,
+  button {
+    width: 100%;
     font-size: 14px;
   }
 

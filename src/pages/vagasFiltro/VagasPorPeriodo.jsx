@@ -27,37 +27,39 @@ const VagasPorPeriodo = () => {
   return (
     <>
       <Header />
-      <div className="vagas-por-periodo-container">
-        <h1>Vagas por Período</h1>
-        {error && <p className="error">{error}</p>}
-        <div className="filter-container">
-          <label htmlFor="periodo">Selecione o Período:</label>
-          <select
-            id="periodo"
-            value={periodo}
-            onChange={(e) => setPeriodo(e.target.value)}
-          >
-            <option value="last-month">Último Mês</option>
-            <option value="last-three-months">Últimos 3 Meses</option>
-            <option value="last-six-months">Últimos 6 Meses</option>
-          </select>
-          <button onClick={fetchVagas} disabled={loading}>
-            {loading ? "Carregando..." : "Carregar Vagas"}
-          </button>
-        </div>
-        <div className="vagas-grid">
-          {vagas.map((vaga, index) => (
-            <div className="vaga-card" key={index}>
-              <h2>{vaga.title}</h2>
-              <p><strong>Descrição:</strong> {vaga.description}</p>
-              <p><strong>Localização:</strong> {vaga.location}</p>
-              <p><strong>Empresa:</strong> {vaga.enterprise}</p>
-              <p><strong>Área:</strong> {vaga.jobArea}</p>
-              <p><strong>Data:</strong> {new Date(vaga.postingDate).toLocaleDateString("pt-BR")}</p>
-              <p><strong>Modalidade:</strong> {vaga.modality}</p>
-              <p><strong>Salario:</strong> {vaga.salary}</p>
-            </div>
-          ))}
+      <div className="vagas-por-periodo-layout">
+        <div className="vagas-por-periodo-container">
+          <h1>Vagas por Período</h1>
+          {error && <p className="error">{error}</p>}
+          <div className="filter-container">
+            <label htmlFor="periodo">Selecione o Período:</label>
+            <select
+              id="periodo"
+              value={periodo}
+              onChange={(e) => setPeriodo(e.target.value)}
+            >
+              <option value="last-month">Último Mês</option>
+              <option value="last-three-months">Últimos 3 Meses</option>
+              <option value="last-six-months">Últimos 6 Meses</option>
+            </select>
+            <button onClick={fetchVagas} disabled={loading}>
+              {loading ? "Carregando..." : "Carregar Vagas"}
+            </button>
+          </div>
+          <div className="vagas-grid">
+            {vagas.map((vaga, index) => (
+              <div className="vaga-card" key={index}>
+                <h2>{vaga.title}</h2>
+                <p><strong>Descrição:</strong> {vaga.description}</p>
+                <p><strong>Localização:</strong> {vaga.location}</p>
+                <p><strong>Empresa:</strong> {vaga.enterprise}</p>
+                <p><strong>Área:</strong> {vaga.tipoJob}</p>
+                <p><strong>Data:</strong> {new Date(vaga.postingDate).toLocaleDateString("pt-BR")}</p>
+                <p><strong>Modalidade:</strong> {vaga.modality}</p>
+                <p><strong>Salario:</strong> {vaga.salary}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <Footer />

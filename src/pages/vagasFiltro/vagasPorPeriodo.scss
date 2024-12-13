@@ -1,30 +1,68 @@
+.vagas-por-periodo-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .vagas-por-periodo-container {
   padding: 20px;
+  flex: 1;
   text-align: center;
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-family: 'MuseoModerno';
+    color: #6b98c6;
+  }
+
+  .error {
+    color: red;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
 
   .filter-container {
     margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 
     label {
-      font-weight: bold;
       margin-right: 10px;
+      font-size: 13px;
+      font-family: 'Poppins', sans-serif;
     }
 
     select {
       margin-right: 10px;
       padding: 5px;
+      font-size: 13px;
+      font-family: 'Poppins', sans-serif;
+      border: 1px solid #ccc;
+      border-radius: 3px;
     }
 
     button {
+      font-size: 13px;
       padding: 5px 10px;
       background-color: #007bff;
       color: white;
       border: none;
       border-radius: 3px;
       cursor: pointer;
+      transition: background-color 0.3s;
+      font-family: 'Poppins', sans-serif;
+
+      &:hover {
+        background-color: #6b98c6;
+      }
 
       &:disabled {
         background-color: #ccc;
+        cursor: not-allowed;
       }
     }
   }
@@ -33,21 +71,97 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
 
     .vaga-card {
       padding: 15px;
       border: 1px solid #ddd;
       border-radius: 5px;
       text-align: left;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
 
       h2 {
         margin-bottom: 10px;
-        color: #007bff;
+        font-family: 'Poppins', sans-serif;
+        color: black;
+        font-size: 18px;
       }
 
       p {
         margin: 5px 0;
+        font-size: 14px;
+        line-height: 1.4;
+        color: #333;
+
+        strong {
+          color: black;
+        }
       }
     }
+  }
+}
+
+footer {
+  margin-top: auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .vagas-por-periodo-container h1 {
+    font-size: 18px;
+  }
+
+  .filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-container select,
+  .filter-container button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .vagas-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .vaga-card h2 {
+    font-size: 16px;
+  }
+
+  .vaga-card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vagas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vaga-card {
+    padding: 10px;
+  }
+
+  .vaga-card h2 {
+    font-size: 14px;
+  }
+
+  .vaga-card p {
+    font-size: 12px;
   }
 }

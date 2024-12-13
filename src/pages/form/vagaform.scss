@@ -93,34 +93,50 @@
 
 
 
+/* Responsividade */
 @media (max-width: 768px) {
   .vaga-form {
     margin-top: 20px;
     padding: 15px;
+    max-width: 500px; /* Reduz a largura máxima */
   }
-  
+
   .form-input,
   .form-textarea {
     font-size: 14px;
+    padding: 10px; /* Menor espaçamento interno */
   }
 
   .form-button {
     font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .vaga-form-title {
+    font-size: 20px; /* Reduz tamanho do título */
   }
 }
 
 @media (max-width: 480px) {
   .vaga-form {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
     padding: 10px;
+    max-width: 80%; /* O formulário ocupa quase toda a tela */
   }
 
   .form-input,
   .form-textarea {
     font-size: 12px;
+    padding: 8px;
   }
 
   .form-button {
     font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .vaga-form-title {
+    font-size: 16px; /* Ajusta título */
   }
 }

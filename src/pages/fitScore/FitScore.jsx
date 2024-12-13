@@ -32,7 +32,7 @@ const FitScore = () => {
         <h1>Visualização dos FitScores</h1>
         {error && <p className="error">{error}</p>}
         <div className="filter-container">
-          <label htmlFor="jobType">Selecione o Tipo de Job:</label>
+          <label htmlFor="jobType">Selecione o Tipo de Vaga:</label>
           <select
             id="jobType"
             value={jobType}
