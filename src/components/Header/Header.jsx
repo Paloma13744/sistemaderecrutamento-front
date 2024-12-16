@@ -18,6 +18,8 @@ const Header = () => {
                 <Link to="/candidato" className="nav-link">Candidato</Link> 
                 <Link to="/fitScore" className="nav-link">FitScore</Link> 
                 <Link to="/vagas-por-periodo" className="nav-link">Vagas por periodo</Link> 
+                <Link to="/vagas-mais-aplicadas" className="nav-link">Vagas mais aplicadas</Link> 
+
             </nav>
 
 

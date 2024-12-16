@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import { getFitScores } from "../../services/api";
+import { getFitScores } from "../../api/api";
 import "./fitScoreList.scss";
 
 const FitScore = () => {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import { postFuncion } from "../../services/api"; 
+import { postFuncion } from "../../api/api"; 
 import './vagaform.scss';
 
 export default function VagaForm() {

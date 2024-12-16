@@ -6,6 +6,7 @@ import VagaList from './pages/List/VagaList';
 import CandidateForm from './pages/form/CandidateForm';
 import FitScore from './pages/fitScore/FitScore';
 import VagasPorPeriodo from './pages/vagasFiltro/VagasPorPeriodo';
+import VagasMaisAplicadas from './pages/vagasMaisAplicadas/VagasMasiAplicadas';
 
 const App = () => {
   return (
@@ -17,6 +18,8 @@ const App = () => {
         <Route path="/candidato" element={<CandidateForm />} /> {/* Página para formulário do candidato */}
         <Route path="/fitScore" element={<FitScore />} /> {/* Página fitScore do candidato */}
         <Route path="/vagas-por-periodo" element={<VagasPorPeriodo />} /> {/* Página fitScore do candidato */}
+        <Route path="/vagas-por-periodo" element={<VagasPorPeriodo />} /> {/* Página fitScore do candidato */}
+        <Route path="/vagas-mais-aplicadas" element={<VagasMaisAplicadas />} /> {/* Página para as vagas mais aplicadas */}
       </Routes>
     </Router>  
   );

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import { postCandidate } from "../../services/api"; // Importando a função para postar dados
+import { postCandidate } from "../../api/api"; // Importando a função para postar dados
 import './candidate.scss';
 
 const CandidateForm: React.FC = () => {

@@ -33,6 +33,20 @@ export const getFitScores = async (tipoDeJob) => {
   }
 };
 
+// Método para buscar as vagas mais aplicadas
+export const getJobsMostApplied = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/jobs/most-applied`);
+    console.log("Vagas mais aplicadas:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao buscar vagas mais aplicadas:", error.response?.data || error.message);
+    throw error;
+  }
+};
+
+
+
 // Método para buscar todas as vagas
 export const getFuncion = async () => {
   try {
